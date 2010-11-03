@@ -1,0 +1,38 @@
+<%= javascript_include_tag "style" %>
+<%= javascript_include_tag "slcv" %>
+<div id="mainholderpad" class="clearfix">
+	<% form_tag(slcr_path, :method => :get) do %>
+		<table class="calculator">
+            <tr>
+            	<th colspan="2">Standard Loan Calculator</th>
+            </tr>
+            <tr>
+                <td>Loan Amount:</td>
+                <td><input onFocus = select(); onBlur=checkLA(this.form); name="LoanAmount" value="25000" /></td>
+            </tr>
+            <tr>
+                <td>Interest Rate:</td>
+                <td><input onFocus = select(); onBlur = checkIR(this.form); name="Interestrate" value="8" /></td>
+            </tr>
+            <tr>
+                <td>Number of Years:</td>
+                <td><input onFocus = select(); onBlur=checkY(this.form); name="NumberOfYears" value="5" /></td>
+            </tr>
+            <tr>
+                <td>Number of Periods Per Year:</td>
+                <td><input onFocus = select(); onBlur = checkP(this.form); name="NumberOfPeriods" value="12" /></td>            
+            </tr>
+            <tr>
+                <td colspan="2">
+                <input type="radio" name="calculate_option" value="0" checked />
+                Calculate Payment Only<br />                
+                <input type="radio" name="calculate_option" value="1" />
+                Calculate Payment and Display Amortization Schedule<br />                 
+                </td>            
+            </tr>  
+            <tr>
+            	<td colspan="2"><p class="centertext"><%= javascript_include_tag "enda" %></p></td>
+            </tr>        
+		</table>
+	<% end %>
+</div>

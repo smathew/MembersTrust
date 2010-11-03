@@ -1,0 +1,80 @@
+/* TOP LEVEL MENUS */
+ul#menu {
+	background-image: url(../images/bg_nav.png);
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	top: 105px;
+	width: 960px;
+	left: 50%;
+	margin-left: -480px;
+	list-style: none;
+	height: 27px;
+	z-index: 3;
+	border: 0 none;
+}
+ul#menu li {
+	display: inline-block;
+	background-color: transparent;
+	float: left;
+	margin: 0px;
+}
+ul#menu li a {
+	text-decoration: none;
+	font-size: .8em;
+	line-height: 27px;
+	display: block;
+	padding: 0px 24px;
+	color: #fff;
+	position: relative;
+	border-right: 1px dotted #003300;
+}
+ul#menu li:hover, ul#menu li.sfhover {
+	background-image: url(../images/bg_nav_over.png);
+	background-repeat: repeat-x;
+}
+
+/* 2ND LEVEL AND ABOVE */
+ul#menu li ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: absolute;
+	background-color: #006600;
+	left: -999em;
+	border-left: 1px solid #003300;
+	border-right: 1px solid #003300;
+	border-top: 1px solid #003300;
+	width: 13em;
+}
+ul#menu li ul li {
+	display: block;
+	border-bottom: 1px solid #003300;
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+ul#menu li ul li a {
+	padding: 0 1em;
+	border: 0 none;
+	display: block;
+	color: #fff;
+	font-weight: normal;
+	font-size: 10px;
+	height: 25px;
+	line-height: 25px;
+	text-align: left;
+	width: auto;
+}
+
+ul#menu li:hover ul, ul#menu li li:hover ul, ul#menu li li li:hover ul, ul#menu li.sfhover ul, ul#menu li li.sfhover ul, ul#menu li li li.sfhover ul {
+	left: auto;
+	zoom: 1;
+
+}
+
+ul#menu li ul a:hover {
+	color: #ffffff;
+	background-image: url(../images/bg_nav_over.png);
+	background-repeat: repeat-x;
+}

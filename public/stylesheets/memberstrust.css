@@ -1,0 +1,822 @@
+/* GLOBAL PAGE ELEMENTS */
+body {
+	background-color: #e5e5c7;
+	margin: 0;
+	padding: 0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: .9em;
+}
+
+img {
+	border: 0 none;
+}
+
+fieldset {
+	border: 0 none;
+}
+
+/* GLOBAL CLASSES */
+.invisible {
+	display: none;
+}
+.indent {
+	padding-left: 20px;
+}
+
+.centertext {
+	text-align: center;
+}
+
+.lefttext {
+	text-align: left;
+}
+
+.fright {
+	float: right;
+}
+
+.fleft {
+	float: left;
+}
+
+.content {
+	font-size: .9em;
+	line-height: 1.4em;
+	padding-left: 20px;
+	padding-right: 30px;
+	padding-bottom: 35px;
+}
+
+.disclaimer {
+	font-size: .8em;
+}
+
+dl.faq dt {
+	font-weight: bold;
+	font-size: 1.1em;
+	color: #006600;
+	margin: 0;
+}
+
+dl.faq dd {
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+dl.faq dd p {
+	margin: 0;
+}
+
+dl.fees {
+	margin: 0 0 0 1em;
+}
+
+dl.fees dt {
+	float: left;
+	clear: left;
+	line-height: 1.5em;
+}
+
+dl.fees dd {
+	margin-left: 12em;
+	text-align: right;
+	line-height: 1.5em;
+}
+
+dl.fees dd.sub_list {
+	margin-left: 4em;
+	clear: left;
+}
+
+dl.fees dd span.indent {
+	margin-left: 3em;
+}
+
+table.holidays {
+	border: 0 none;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table.holidays thead {
+	display: none;
+}
+
+tr.highlight {
+	background-color: #f0f9f3;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#dropshadow {
+	background-image: url(../images/bg_dropshadow.png);
+	background-repeat: repeat-y;
+	background-position: center;
+	margin: 0;
+	padding: 0px;
+}
+
+#container { 
+	margin: 0 auto; 
+	background-color:#ffffff;
+	width: 920px;
+	padding: 47px 20px 20px 20px;
+}
+
+/*********** HEADER ********/
+#header {
+	background-image:url(../images/bg_topfade.png);
+	background-repeat: repeat-y;
+	z-index: 0;
+	border-bottom: 1px solid #000000;
+}
+
+#banner {
+	background: #ffffff url( ../images/logo.jpg ) left no-repeat;
+	height: 104px;
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#banner h1 {
+	display: none;
+}
+
+form#hbloginF {
+	position: absolute;
+	top: 15px;
+	left: 50%;
+	margin-left: 160px;
+}
+
+form#hbloginF fieldset {
+	margin: 0;
+	background: url( ../images/l0ck.png ) left no-repeat;
+	padding: 0 1em 0 30px;
+}
+
+form#hbloginF fieldset ul {
+	float: left;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+form#hbloginF fieldset ul li {
+	float: left;
+	margin: 0 1em 0 0;
+}
+
+form#hbloginF fieldset ul li label {
+	position: absolute;
+	top: 30px;
+	font-size: .7em;
+}
+
+form#hbloginF fieldset ul li input {
+	background-color:#b3d9b3;
+	font-size: .7em;
+	padding: .3em;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 8em;
+	border: 1px dotted #2b4f2b;
+	margin: 0;
+}
+
+form#hbloginF input.submit {
+	font-size: .9em;
+	text-align: center;
+	float: left;
+}
+
+/********** MENU **********/
+
+#nav {
+	background-image: url(../images/bg_nav.png);
+	border-bottom: 1px solid #003300;
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+	display: block;
+	z-index: 999;
+}
+
+/*********** CONTAINER LEFT **********/
+#content_left {
+	float: left;
+	width: 684px;
+	display: block;
+	margin: 0;
+}
+
+#content_left h2 {
+	background-attachment: fixed;
+	background-position: left bottom;
+	background:url(../images/bg_h4.jpg) no-repeat;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-top: 3px;
+	height: 45px;
+	font-size: 1em;
+}
+
+#content_left a {
+	color: #006600 ;
+}
+
+#content_left a:hover {
+	color: #00cc00 ;
+}
+
+#visa table {
+	border-collapse: collapse;
+	margin-bottom: 2em;
+}
+
+#visa table th {
+	text-align: left;
+}
+
+#visa table td {
+	line-height: 2em;
+}
+
+#contact p{
+	display: block;
+
+}
+#contact a{
+	display: block;
+}
+#contact a:hover{
+	display: block;
+}
+
+#contact div {
+	height: 100px;
+	width: 220px;
+	padding-left: 60px;
+	float: left;
+	margin: 1em 0;
+}
+
+#contact div h3 {
+	font-size: 1em;
+	margin: 0;
+}
+
+#contact .email {
+	background: transparent url(../images/contact_mail.jpg) center left no-repeat;
+	
+}
+#contact .phone {
+	background: transparent url(../images/contact_phone.jpg) center left no-repeat;
+}
+
+#contact .members {
+	background: transparent url(../images/contact_question.jpg) center left no-repeat;
+}
+
+#contact .hours {
+	background: transparent url(../images/contact_hours.jpg) center left no-repeat;
+}
+#contact .locations {
+	background: transparent url(../images/contact_locations.jpg) center left no-repeat;
+}
+#contact .lost {
+	background: transparent url(../images/contact_lost.jpg) center left no-repeat;
+}
+
+#contact .wiring {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#contact p {
+	float: left;
+}
+
+#eservices p {
+	margin-bottom: 3em;
+}
+
+/*** INDEX ***/ 
+#specials {
+	background-image:url(../images/header_specials.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	padding-top: 44px;
+	z-index: 0;
+	display: block;
+	height: 250px;
+	
+}
+
+div.index_left {
+	padding-top: 15px;
+	padding-bottom: 20px;
+	float: left;
+}
+
+div.index_right {
+	padding-top: 15px;
+	padding-left: 5px;
+	float: left;
+	width: 550px;
+}
+
+div.index_right div.ads {
+	width: 159px;
+	margin: 0 .7em .5em .7em;
+	float: left;
+	height: 156px;
+	border: none;
+}
+
+div.index_right p {
+	color: #990000;
+	font-size: .9em;
+	padding: 1em;
+}
+
+
+/*********** CONTAINER RIGHT **********/
+#content_right {
+	float: left;
+	margin: 0px 0px 0px 15px;
+	padding: 0;
+	width: 220px;
+	display: inline;
+}
+
+#bottomlinks ul {
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+	padding-top: 10px;
+	float: left;
+	
+}
+
+#bottomlinks li{
+	display: inline;
+	text-align: center;
+	width: 45%;
+	padding: 0px 0px 0px 5px
+
+}
+
+
+
+
+/*********** FOOTER ****************/
+#footer {
+	background-image: url(../images/bg_footer.png);
+	background-repeat: repeat-x;
+	height: 68px;
+	margin: 0 auto;
+	text-align: center;
+	width: 960px;
+}
+
+#footer .footerleft {
+	width: 50%;
+	float: left;
+	left: 0;
+
+}
+#footer .footerleft ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: block;
+}
+#footer .footerleft ul li {
+	display: block;
+	float: left;
+	margin: 0 1em;
+	padding-top: 30px;
+}
+#footer .footerleft ul li a {
+	display: block;
+	padding: 0;
+	text-decoration: none;
+	text-align: center;
+	color: #ffffff;
+	font-size: .8em;
+}
+
+#footer .footerright {
+	width: 48%;
+	float: left;
+	text-align: right;
+}
+
+
+#footer .footerright ul {
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	display: block;
+	float: right;
+}
+#footer .footerright ul li {
+	display: block;
+	float: left;
+	margin: 0;
+	padding-top: 40px;
+	font-size: 0.7em;
+	width: auto;
+	text-align: right;
+
+}
+#footer .footerright ul li a {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	color: #000;
+	margin-left: 7px;
+	margin-right: 7px;
+
+}
+
+#footer .footerright ul li a:hover{
+	display: block;
+	text-decoration: underline;
+	text-align: center;
+	color: #003300;
+	margin-left: 7px;
+	margin-right: 7px;
+}
+
+#footer .footerright ul li a img{
+	display: block;
+	text-decoration: none;
+	padding-left: 10px;
+}
+
+/************** HB LOGIN *************/
+
+#login ul{
+	margin: 10px auto;
+	padding: 0;
+	list-style-type: none;
+	display: block;
+	width: 22em;
+	float: right;
+}
+
+#login ul li{
+	display: block;
+	margin: auto;
+	font-size: 0.7em;
+	color: #000;
+	width: 100px;
+	float: left;
+	text-align: center;
+	padding-right: 5px;
+
+}
+
+#login ul li.lileft{
+	text-align: left;
+	padding-left: 5px;
+}
+#login .lock {
+	width: 25px;
+}
+
+/******** LOANS *********/
+#autoloans {
+	background-image:url(../images/autoloans.png);
+	background-repeat:no-repeat;
+	padding: 0;
+	background-position: right top;
+}
+
+#autoloans p{
+	width: 375px;
+}
+
+#autoloans ul {
+	padding-top: 25px;
+}
+
+.apply a {
+	display: block;
+	background-repeat: no-repeat;
+	background-image: url(../images/apply_off.jpg);
+	height: 59px;
+	width: 130px;
+	margin: 0px;
+	padding: 20px;
+	background-position: center;
+}
+
+.apply a:hover{
+	background-image: url(../images/apply_on.jpg);
+}
+
+#homeloans {
+	background-image:url(../images/homeloans.png);
+	background-repeat:no-repeat;
+	padding: 0;
+	background-position: right top;
+}
+
+#homeloans p {
+	width: 375px;
+}
+
+#visa {
+	background-image:url(../images/verified2.png);
+	background-repeat:no-repeat;
+	padding: 0;
+	background-position: right top;
+}
+
+#visa table {
+	font-size: .9em;
+}
+
+#visa p {
+	width: 500px;
+	
+}
+
+/*********************************/
+dl.directors dt {
+	float: left;
+	clear: left;
+}
+
+dl.directors dd {
+	margin-left: 20em;
+}
+
+ul.directors {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul.directors li {
+	margin: 0;
+	padding: 0;
+}
+
+.small_block {
+	margin-bottom: 20px;
+	width: 219px;
+}
+
+.small_block p.effective {
+	font-size: .6em;
+	margin: 0;
+	padding: 0;
+}
+
+.small_block h2 {
+	background-image: url( ../images/small_block_header.jpg );
+	text-align: center;
+	height: 45px;
+	line-height: 45px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 1.2em;
+	margin: 0;
+}
+
+.small_block div, .small_block ul {
+	list-style-type: none;
+	background: #ffffff url(../images/bg_rates.png) top left repeat;
+	margin: 0;
+	padding: 15px 0 10px 0;
+	text-align: center;
+}
+
+#atm2 {
+	background: transparent url( ../images/atm.png ) right top no-repeat;
+	padding: 0;
+}
+
+#atm2 p {
+	width: 425px;
+}
+
+#rates {
+	color: #ffffff;
+}
+
+#rates div {
+	padding-top: 5px;
+}
+
+#rates table {
+	width: 190px;
+	margin: 0 0 .5em 1em;
+}
+
+#rates table caption {
+	font-weight: bold;
+	text-align: left;
+	line-height: 1em;
+	padding: 0;
+	margin: 0;
+}
+
+#rates table thead {
+	display: none;
+}
+
+#rates table td {
+	padding-left: .5em;
+	font-size: .8em;
+	line-height: 1.2em;
+	text-align: left;
+}
+
+#rates table td.rate {
+	text-align: right;
+}
+#rates a.more {
+	background: url(../images/more.png ) left no-repeat;
+	display: block;
+	padding-left: 30px;
+	color: #ffffff;
+	font-size: .8em;
+	text-decoration: none;
+	float: right;
+	margin: 0 1em 0 0;
+}
+
+#rates a.more:hover {
+	background-image:url(../images/more_on.png);
+}
+
+#atm ul {
+	background: #000000 url( ../images/bg_atmloc.png ) top left repeat-y;
+}
+
+#atm ul li {
+	padding: 0;
+	margin: 0 0 0 22px;
+	width: 80px;
+	float: left;
+}
+
+#atm ul li a {
+	background: transparent url( ../images/search.png ) no-repeat top left;
+	width: 65px;
+	height: 21px;
+	font-size: .7em;
+	text-decoration: none;
+	color: #000000;
+	display: inline-block;
+	text-align: center;
+	line-height: 21px;
+}
+
+#atm ul li a:hover {
+	background: transparent url( ../images/search_on.png ) no-repeat top left;
+}
+/************** RATES ******************/
+#ratespage table {
+	border-collapse: collapse;
+	/*
+	width: 40em;
+	*/
+	width: 90%;
+	margin-bottom: 2em;
+}
+
+#ratespage table thead th {
+	border-bottom: 1px dotted #006600;
+	color: #006600;
+}
+
+#ratespage table td.indent {
+	padding-left: 35px;
+}
+
+#ratespage table td.desc {
+	width: 40%;
+}
+
+#ratespage table.two_column td {
+	width: 50%;
+}
+
+/************ANNUAL REPORTS ************/
+#annual ul{
+	list-style-type:none;
+}
+
+#annual ul li{
+	display: block;
+	background-image:url(../images/acrobat_icon.jpg);
+	background-position:left;
+	background-repeat: no-repeat;
+	padding-left: 35px;
+}
+
+.border{
+	border-bottom: 1px dotted #006600;
+}
+
+/************* LOAN CALCULATOR **********/
+.loancalc {
+	float: left;
+	width: 350px;
+	background-color: #fff;
+	color: #006600;
+	border: none;
+	margin: 0;
+	padding: 0;
+	line-height: 12px;
+	font-weight: bold;
+}
+/****** BROWSER REQUIREMENTS *****/
+ul.browsers {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+ul.browsers li a {
+	text-decoration: none;
+}
+
+ul.browsers li {
+	background: transparent url( ../images/background_browser.gif) top center no-repeat;
+	text-align: center;
+	width: 120px;
+	height: 122px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: .8em;
+	margin: 0;
+	padding: 5px 0;
+	display: inline-block;
+}
+ul.browsers li img {
+	margin-bottom: 20px;
+}
+
+/************ CALCULATORS **************/
+#calcerror {
+	background-color: #ffffcc;
+	color: black;
+	border: 1px solid red;
+	width: 30em;
+	margin: 0 auto;
+	padding: 0 2em;
+}
+
+#calcerror p {
+	margin: 1em 0;
+	font-weight: bold;
+}
+
+#calcerror ul {
+	margin: 0 0 1em 3em;
+	padding: 0;
+}
+
+#calcerror ul li {
+	margin: 0;
+	padding: 0;
+}
+
+/********* SAVINGS CALCULATOR **********/
+#savingscalc form {
+}
+
+#savingscalc fieldset {
+}
+
+#savingscalc dl {
+	margin: 0 auto;
+	width: 35em;
+}
+
+#savingscalc dl dt {
+	float: left;
+	clear: left;
+	width: 20em;
+	text-align: right;
+	margin: 0;
+	line-height: 2em;
+}
+
+#savingscalc dl dd {
+	margin: 0 0 0 21em;
+	line-height: 2em;
+}

@@ -1,0 +1,193 @@
+		</div> <!-- content_left -->
+		<div id="content_right" class="clearfix">
+				<div id="rates" class="small_block">
+					<h2>Today&#39;s Rates</h2>
+					<div class="clearfix">
+						<p class="effective">Effective <%= Time.now.strftime("%B %d, %Y") %></p>
+						<table>
+							<caption class="clearfix"><span class="fleft">Loans</span><span class="fright"> As Low As* </span></caption>
+							<thead>
+								<tr>
+									<th>Product</th>
+									<th>Rate</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Auto</td>
+									<td class="rate">*3.25%</td>
+								</tr>
+								<tr>
+									<td>Home Equity</td>
+									<td class="rate">*5.25%</td>
+								</tr>
+								<tr>
+									<td>Visa Gold</td>
+									<td class="rate">9.96%</td>
+								</tr>
+								<tr>
+									<td>Visa Classic</td>
+									<td class="rate">14.88%</td>
+								</tr>
+							</tbody>
+						</table>
+						<table>
+							<caption>Savings</caption>
+							<thead>
+								<tr>
+									<th>Product</th>
+									<th>Rate</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Money Market</td>
+									<td class="rate">0.30%&nbsp;-&nbsp;0.70%</td>
+								</tr>
+								<tr>
+									<td>12 Month CD</td>
+									<td class="rate">0.95%</td>
+								</tr>
+								<tr>
+									<td>24 Month CD</td>
+									<td class="rate">1.25%</td>
+								</tr>
+								<tr>
+									<td>60 Month CD</td>
+									<td class="rate">2.25%</td>
+								</tr>
+							</tbody>
+						</table>
+						<%= link_to "more", rates_path, :class=>"more" %>
+					</div>
+				</div>
+				<div id="atm" class="small_block">
+					<h2>ATM Locator</h2>
+					<ul class="clearfix">
+						<li>
+							<%= image_tag "alliance2.png", :alt=>"Alliance One" %>
+							<%= link_to "Search", "http://www.atmallianceone.org", :rel=>"confirm external" %>
+						</li>
+						<li>
+							<%= image_tag "coop2.png", :alt=>"Co-Op" %>
+							<%= link_to "Search", "http://www.co-opfs.org/public/locators/ATMlocator/index.cfm", :rel=>"confirm external" %>
+						</li>
+					</ul>
+				</div>
+				<div id="bottomlinks">
+					<ul>
+						<li><%= image_tag "verified.png", :alt=>"", :width=>103, :height=>44 %></li>
+						<li><%= image_tag "star.png", :alt=>"", :width=>81, :height=>49 %></li>
+					</ul>
+				</div>
+			</div>
+		</div> <!-- container -->
+		<div id="footer">
+			<div class="footerleft clearfix">
+				<ul>
+					<li><%= image_tag "ehl.png", :alt=>"Equal Housing Lender", :width=>95, :height=>17 %></li>
+					<li><%= image_tag "ncua.png", :alt=>"Federally Insured by the NCUA", :width=>251, :height=>24 %></li>
+				</ul>
+			</div>
+			<div class="footerright clearfix">
+				<ul class="clearfix">
+					<li><%= link_to "Privacy Policy", privacy_path %></li>
+					<li>|</li>            
+					<li><%= link_to "Browser Requirements", browserreq_path %></li>
+					<li><%= link_to image_tag("shareone.png", :alt=>"Share One Inc.", :width=>76, :height=>21), "http://www.shareone.com/", :rel=>"confirm external" %></li>
+				</ul>
+			</div>
+		</div>
+		<form id="hbloginF" method="post" action="https://memberstrust.nssecurebanking.org/hbv3_2/login.asp">
+			<fieldset>
+				<ul class="clearfix">
+					<li>
+						<label for="hbloginFaccount">Account Number</label>
+						<input type="text" name="account" id="hbloginFaccount" size="10" class="formfield" />
+					</li>
+					<li>
+						<label for="hbloginFpassword">PIN</label>
+						<input type="password" name="pin" id="hbloginFpassword" size="10" class="formfield" />
+					</li>
+				</ul>
+				<input type="submit" value="LOGIN" class="submit" />
+			</fieldset>
+		</form>
+		<ul class="clearfix" id="menu">
+			<li><%= link_to "Home", root_path %></li>
+			<li>
+				<a href="#">Deposit Accounts</a>
+				<ul>
+					<li><%= link_to "ATM/Debit Cards", atmdebit_path %></li>
+					<li><%= link_to "Checking", accts_checking_path %></li>
+					<li><%= link_to "Savings", accts_savings_path %></li>
+					<li><%= link_to "Certificate", accts_savings_path(:anchor => "certificates") %></li>
+					<li><%= link_to "IRA", accts_savings_path(:anchor => "ira") %></li>
+					<li><%= link_to "Holiday Club", accts_savings_path(:anchor => "holidayclub") %></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Loans</a>
+				<ul>
+					<li><%= link_to "Auto Loans", loans_auto_path %></li>
+					<li><%= link_to "Home Equity", loans_heloc_path %></li>
+					<li><%= link_to "Home Loans", loans_home_path %></li>
+					<li><%= link_to "Visa", loans_visa_path %></li>
+					<li><%= link_to "Other Loans", loans_other_path %></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Rates</a>
+				<ul>
+					<li><%= link_to "CD/IRA", rates_path(:anchor => "cd") %></li>
+					<li><%= link_to "Loans", rates_path(:anchor => "loans") %></li>
+					<li><%= link_to "Savings", rates_path(:anchor => "savings") %></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">eServices</a>
+				<ul>
+					<li><%= link_to "Online Bill Pay", eservices_path(:anchor => "billpay") %></li>
+					<li><%= link_to "eStatements", eservices_path(:anchor => "estatements") %></li>
+					<li><%= link_to "Check Reorder", eservices_path(:anchor => "reorder") %></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">About Us</a>
+				<ul>
+					<li><%= link_to "Annual Reports", annualreports_path %></li>
+					<li><%= link_to "Board of Directors", board_path %></li>
+					<li><%= link_to "FAQ's", faq_path %></li>
+					<li><%= link_to "Message from Pres.", presmessage_path %></li>
+					<li><%= link_to "Mission Statement", mission_statement_path %></li>
+					<li><%= link_to "Our History", history_path %></li>              
+					<li><%= link_to "Who Can Join", whocanjoin_path %></li>              
+				</ul>
+			</li>
+			<li><a href="#">Contact Us</a>
+				<ul>
+					<li><%= link_to "Contact Information", contact_path %></li>
+					<li><%= link_to "Holiday Schedule", holidays_path %></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Disclosures</a>
+				<ul>
+					<li><%= link_to "Fee Schedule", fees_path %></li>
+					<li><%= link_to "Funds Availability", disclosures_funds_path %></li>
+					<li><%= link_to "STAR&reg; Card / EFT", "pdf/STARTERM1 _2_.pdf" %></li>
+					<li><%= link_to "VISA&trade; Credit Card", "pdf/Visa Disclosure _4_.pdf" %></li>
+				</ul>
+			</li>
+		</ul>
+	</div> <!-- dropshadow -->
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-9785528-39");
+		pageTracker._trackPageview();
+	} catch(err) {}
+	</script>

@@ -1,0 +1,74 @@
+<h2>Home Loans</h2>
+				<div class="content">
+					<div id="homeloans">
+						<h3>ReFi5 Program</h3>
+						<p>
+							A ReFi5 loan with Members Trust is the perfect way to refinance your existing mortgage
+							loan.&nbsp; The program offers a fixed rate for 5 years, with amortization options
+							from 10 to 30 years.
+						</p>
+						<h3>Other Benefits and Guidelines:</h3>
+						<ul>
+							<li>Competitive interest rates</li>
+							<li>Maximum loan-to-value (LTV) is 90%</li>
+							<li>Minimum loan amount $25,000</li>
+							<li>Out of pocket expenses vary by location but generally average $350</li>
+						</ul>
+						<p class="apply">
+							<%= link_to "", "https://memberstrust.nssecurebanking.org/HBV3_2/hbloanapplogin.asp" %>
+						</p>
+					</div>
+					<h3>Home Loans</h3>
+					<p>
+						Through our strategic partnership with Emery Financial Services, Inc., Members Trust
+						is able to offer mortgage loans to fit a variety of needs.&nbsp;  We offer the following
+						traditional loan products:
+					</p>
+					<ul>
+						<li>Purchase 1st mortgages</li>
+						<li>Refinance 1st mortgages</li>
+						<li>FHA loans</li>
+						<li>VA loans</li>
+						<li>Rural development loans</li>
+						<li>Construction loans</li>
+					</ul>
+					<p>
+						Click <%= link_to "here", "http://www.memberstrustmortgage.org", :rel=>"external" %> to learn more
+						about these products and services or to complete application.
+					</p>
+					<p>
+						<%= image_tag "ehl2.png", :alt=>"Equal Housing Lender" %>
+					</p>
+					<%= javascript_include_tag "loancalc" %>
+					<h2>Loan Calculator</h2>       
+					<p class="indent">
+						Want to calculate your payments?  Use the Loan Calculator find the payments for you.
+					</p>
+					<p class="indent">
+						Simply fill out the first three fields and then select &#39;compute&#39;.
+					</p>
+					<div class="indent">
+						<form method="post">
+							<table class="loancalc">
+								<tr>
+									<td align="center"># of Payments</td>
+									<td align="center">Interest Rate</td>
+									<td align="center">Principal</td>
+									<td align="center">Monthly Payment</td>
+								</tr>
+								<tr>
+									<td align="center"><input type="text" name="payments" size="5" onchange="computeField(this)" /></td>
+									<td align="center"><input type="text" name="interest" size="6" onchange="computeField(this)" /></td>
+									<td align="center"><input type="text" name="principal" size="9" onchange="computeField(this)" /></td>
+									<td align="center"><input type="text" name="payment" size="9" onchange="computeField(this)" /></td>
+								</tr>
+								<tr>
+									<td align="center" colspan="4">
+										<input type="button" value="Compute" onclick="computeForm(this.form)" />
+										<input type="reset" value="Clear" onclick="clearForm(this.form)" />
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>

@@ -1,0 +1,54 @@
+<h2>Auto Loans</h2>
+				<div class="content">
+					<div id="autoloans">
+						<p>
+							Looking for a new or used vehicle or want to refinance your existing loan
+							from another financial institution?&nbsp; Members Trust offers a variety of
+							terms for new and used auto loans. Check out our <%= link_to "current rates and terms", rates_path %>.
+						</p>
+						<ul>
+							<li>Fast online loan application</li>
+							<li>Apply online, by phone or at our office</li>
+							<li>Loan documents are ready when you're ready to purchase your car</li>
+							<li>Choose terms anywhere from 36 to 84<sup>1</sup> months.  Up to 100% financing for qualified buyers</li>
+							<li>Keep interest rates low while taking advantage of dealer rebates</li>
+							<li>Pay online, by phone, or with an automatic withdrawal from your Members Trust account, and see your balance on your monthly statement</li>
+							<li>Big savings on GAP Insurance, Mechanical Breakdown Protection and Credit Life and Disability</li>
+						</ul>
+						<p class="apply">
+							<%= link_to "", "https://memberstrust.nssecurebanking.org/HBV3_2/hbloanapplogin.asp" %>
+						</p>
+					</div>
+					<%= javascript_include_tag "loancalc" %>
+					<h2>Loan Calculator</h2>       
+					<p class="indent">
+						Want to calculate your payments?  Use the Loan Calculator find the payments for you.
+					</p>
+					<p class="indent">
+						Simply fill out the first three fields and then select &#39;compute&#39;.
+					</p>
+					<div class="indent">
+						<form method="post">
+							<table class="loancalc">
+								<tr>
+									<td align="center"># of Payments</td>
+									<td align="center">Interest Rate</td>
+									<td align="center">Principal</td>
+									<td align="center">Monthly Payment</td>
+								</tr>
+								<tr>
+									<td align="center"><input type="text" name="payments" size="5" onchange="computeField(this)" /></td>
+									<td align="center"><input type="text" name="interest" size="6" onchange="computeField(this)" /></td>
+									<td align="center"><input type="text" name="principal" size="9" onchange="computeField(this)" /></td>
+									<td align="center"><input type="text" name="payment" size="9" onchange="computeField(this)" /></td>
+								</tr>
+								<tr>
+									<td align="center" colspan="4">
+										<input type="button" value="Compute" onclick="computeForm(this.form)" />
+										<input type="reset" value="Clear" onclick="clearForm(this.form)" />
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>

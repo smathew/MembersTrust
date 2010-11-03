@@ -1,0 +1,76 @@
+<h2>Savings Accounts</h2>
+				<div class="content">
+					<p>Your savings account represents your share of ownership in the credit union. Your initial deposit of $5 establishes your account and is your opportunity to earn competitive dividends.  Dividends on accounts with $100 or more are calculated daily and paid monthly. Deposits and withdrawals may be made at any time. </p>
+					<h3>Money Market Account</h3>
+					<p>
+						An Insured Money Market Account offers high short-term dividend rates on deposits, yet it allows easy access without penalty and guarantees complete safety. You can make unlimited deposits with a minimum balance requirement of $2,500.  Click <%= link_to "here", rates_path %> to view our current rates.
+					</p>
+					<a name="certificates"></a>
+					<h3>Share Certificates</h3>
+					<p>
+						Share Certificates offer competitive interest rates for a variety of terms from 91 days up to 60 months.  Share Certificates can be opened with a minimum of $500 and earn monthly dividends higher than a basic savings account.  Click <%= link_to "here", rates_path %> to view our current rates.
+					</p>
+					<a name="ira"></a>
+					<h3>Individual Retirement Accounts</h3>
+					<p>
+						If you are looking ahead to retirement, Members Trust offers a variety of IRA savings and IRA share certificate accounts.  An IRA is an excellent tool for retirement savings.  Unlike most investments, depending on the type of IRA you choose, contributions may be tax deductible and will grow either tax-deferred or tax-free.  Click <%= link_to "here", rates_path %> to view our current rates.
+					</p>
+					<a name="holidayclub"></a>
+					<h3>Holiday Club</h3>
+					<p>
+						Members Trust can help relieve the stress of the season by saving throughout the year for your shopping needs.  It’s an easy way to save money to satisfy everyone on your gift list.  For instance, at the end of 26 bi-weekly deposits you could see the following results:
+					</p>
+					<ul>
+						<li>$20 bi-weekly:	$520</li>
+						<li>$30 bi-weekly:	$780</li>
+						<li>$50 bi weekly:	$1,300</li>
+					</ul>
+					<p>Click <%= link_to "here", "pdf/2011 HOLIDAY CLUB.pdf", :rel=>"external" %> to download our Holiday Club application.</p>
+					<h3>Vacation Club</h3>
+					<p>
+						It's never too early to start saving for that hard-earned vacation.  The best way to save for your next vacation is to figure out how much you will need and then start saving with a Members Trust Vacation Club account.
+					</p>
+					<h3>U Name It</h3>
+					<p>
+						Have something you are saving for?  This account can be used to save for things such as college tuition, a personal computer, down payment on a home or any other purchase or project.  You choose the reason and we'll title the account so you can watch your balances grow.
+					</p>
+					<%= javascript_include_tag "calcsavings" %>
+					 <h4>Savings Calculator</h4>       
+								<div class="indent">
+					<p>To use calculator, simply enter <b>Total invested each month</b>, 
+					<strong>Number of months/years to aquire sum</strong>, <strong>Interest rate on savings</strong> and 
+					then click on <strong>'How much will I have?' </strong>button to calculate your total savings. 
+					The calculator will not accept any characters other than numbers and decimal points, (i.e. commas, dashes, percent signs, dollar signs and etc.). So please do not enter any other characters. To recompute, simply click on <strong>'Clear Form'</strong> and start over.</p>
+
+					<form method="post" id="savingsCalc">
+						<table width="400">
+							<tr>
+								<td align="right">Total invested each month:</td>
+								<td><input type="text" name="payment" size="13" maxlength="13" /></td>
+							</tr>
+							<tr>
+								<td align="right">Number of months/years to aquire sum:</td>
+								<td><input type="text" name="months" size="3" maxlength="3" /> 
+									<select name="period" size="1">
+										<option value="m">Months</option>
+										<option value="y">Years</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">Interest rate on savings:</td>
+								<td><input type="text" name="interest" size="5" maxlength="5" /><b> %</b></td>
+							</tr>
+							<tr>
+								<td colspan="2" align="center"> <br />
+								<input type="reset" value="Clear Form" />  
+								<input type="button" name="button1" value="How much will I have?" onclick="javascript:CalcTotalSavings()" /></td>
+							</tr>
+							<tr>
+								<td colspan="2" align="center"><br />Total :
+								<input type="text" name="total" value="" size="15" maxlength="15" /></td>
+							</tr>
+						</table>
+					</form>
+              </div>
+		</div>

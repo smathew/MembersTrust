@@ -1,0 +1,61 @@
+<h2>Other Loan Options</h2>
+				<div class="content">
+					<p>
+						Members Trust has a number of loan products to fit your everyday needs.&nbsp; For practically anything you can imagine, Members Trust can provide a loan to fund it.&nbsp;  Check out our <%= link_to "current rates and terms", rates_path(:anchor => "other") %>.
+					</p>
+					<h3>Unsecured Loan</h3>
+					<p>
+						Take advantage of our low-rate, unsecured personal loans for all your borrowing needs.&nbsp; When you need a loan for debt consolidation, catching up on some bills, or taking that long needed vacation, Members Trust has the loan for you.
+					</p>
+					<h3>Overdraft Protection Line of Credit</h3>
+					<p>
+						This line of credit protects your checking account in the event of an unexpected accounting error.&nbsp; This account can also be used for short-term financial needs.&nbsp; You have the flexibility to determine how the account is used.
+					</p>
+					<h3>Motorcycle / RV / Boat</h3>
+					<p>
+						If you are looking forward to relaxing and enjoying yourself during those lazy days of summer you are guaranteed not to be disappointed with a new or used motorcycle, RV or boat loan.
+					</p>
+					<h3>Share Secured</h3>
+					<p>
+						Borrow funds secured by your own Members Trust savings or certificate of deposit at an attractive rate.
+					</p>
+					<h3>APPLY TODAY!</h3>
+					<p>
+						Call us today at 800-769-8934 and tell us your loan needs.&nbsp; If you can imagine it, odds are we have a loan for you.
+					</p>
+					<p class="apply">
+						<%= link_to "", "https://memberstrust.nssecurebanking.org/HBV3_2/hbloanapplogin.asp" %>
+					</p>
+					<%= javascript_include_tag "loancalc" %>
+					<h2>Loan Calculator</h2>       
+					<p class="indent">
+						Want to calculate your payments?  Use the Loan Calculator find the payments for you.
+					</p>
+					<p class="indent">
+						Simply fill out the first three fields and then select &#39;compute&#39;.
+					</p>
+					<div class="indent">
+						<form method="post">
+							<table class="loancalc">
+								<tr>
+									<td align="center"># of Payments</td>
+									<td align="center">Interest Rate</td>
+									<td align="center">Principal</td>
+									<td align="center">Monthly Payment</td>
+								</tr>
+								<tr>
+									<td align="center"><input type="text" name="payments" size="5" onchange="computeField(this)" /></td>
+									<td align="center"><input type="text" name="interest" size="6" onchange="computeField(this)" /></td>
+									<td align="center"><input type="text" name="principal" size="9" onchange="computeField(this)" /></td>
+									<td align="center"><input type="text" name="payment" size="9" onchange="computeField(this)" /></td>
+								</tr>
+								<tr>
+									<td align="center" colspan="4">
+										<input type="button" value="Compute" onclick="computeForm(this.form)" />
+										<input type="reset" value="Clear" onclick="clearForm(this.form)" />
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>

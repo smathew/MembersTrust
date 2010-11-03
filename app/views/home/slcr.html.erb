@@ -1,0 +1,72 @@
+<%= javascript_include_tag "pad" %>
+<%= javascript_include_tag "read" %>
+<script type="text/javascript">
+	var ZZZ = getValue(passed, 'calculate_option');
+	if (ZZZ == 1) {
+		if (getValue(passed, 'NumberOfYears') > 15) {
+		alert("Please wait while Standard Loan Calculator builds the amortization table. This can take up to 30 seconds or more, depending on the speed of your computer's processor and the web browser you are using.\n\nInternet Explorer Users: When computing a long-term loan, you may get the following message: 'A script on this page is causing Internet Explorer to run slowly. If it continues to run, your computer may become unresponsive. Do you want to abort the script?'\n\nThere is absolutely no danger of your computer becoming unresponsive. Click NO when you get this message box to display the results of your calculation.");
+		}
+	}
+    </script>
+<div id="mainholderpad" class="clearfix">
+    <% form_tag do %>
+        <table class="calcresults">
+            <tr> 
+            	<th colspan="2">Standard Loan Calculator</th>
+            </tr>
+            <tr>
+                <td colspan="2"><p class="centertext"><strong>Results</strong></p></td>
+            </tr>
+            <tr> 
+                <td>Loan Amount:</td>
+                <td><script type="text/javascript">
+                    var A = getValue(passed,'LoanAmount');
+                    if (A < 0) { A = 0 }
+                    document.write(currencyPad(A));
+                    </script>
+                </td>
+            </tr>
+            <tr> 
+                <td>Interest Rate:</td>
+                <td><script type="text/javascript">
+                    var B = getValue(passed,'Interestrate');
+                    if (B < 0) { B = 0 }
+                    document.write(roundingPad((B * 100.00)/100)+"%");
+                    </script>
+                </td>
+            </tr>
+            <tr> 
+                <td>Number of Years:</td>
+                <td><script type="text/javascript">
+                    var C = getValue(passed,'NumberOfYears');
+                    if (C < 0) { C = 0 }
+                    document.write(integerPad(C));
+                    </script>
+                </td>
+            </tr>
+            <tr> 
+                <td>Number of Periods Per Year:</td>
+                <td>  
+                    <script type="text/javascript">
+                    var D = getValue(passed,'NumberOfPeriods');
+                    if (D < 0) { D = 0 }
+                    document.write(integerPad(D));
+                    </script>
+                </td>
+            </tr>
+            <tr> 
+                <td>Payment Amount:</td>
+                <td><%= javascript_include_tag "slcc" %>
+                </td>
+            </tr>
+            <tr> 
+                <td>Total Interest Paid:</td>
+                <td><script type="text/javascript">document.write(currencyPad(TOTINT));</script></td>
+            </tr>
+            <tr>
+                <td colspan="2"><%= javascript_include_tag "slca" %>
+					<%= javascript_include_tag "endb" %></td>
+            </tr>
+        </table>
+    <% end %>
+</div>

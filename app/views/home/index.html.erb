@@ -1,0 +1,33 @@
+		<div id="specials">
+			<%= render :partial => 'shared/slideshow', :locals => {
+				:slideimages => [
+					{ :image => 'ads/ad_autoloans2.jpg', :url => '' },
+					{ :image => 'ads/ad_05.jpg', :url => 'https://www.memberstrust.org/e-services.asp#estatements' },
+					{ :image => 'ads/ad_holidayclub.jpg', :url => 'pdf/2011 HOLIDAY CLUB.pdf' }
+				]}
+			-%>		
+		</div>
+
+				<!-- LEFT -->
+				<div class="index_left">
+					<%= link_to image_tag("quicken_free.jpg", :alt=>"Its Easy"), "http://quicken.intuit.com/personal-finance-software/free-online-money-management.jsp" %>
+		    </div>
+				<!-- RIGHT -->
+				<div class="index_right clearfix">
+					<div class="ads">
+						<%= link_to image_tag("ads/small_1.png", :alt=>"Membership Application"), "pdf/membership_application.pdf" %>
+					</div>
+					<div class="ads">
+						<%= link_to image_tag("ads/small_2.png", :alt=>"Loan Application"), "https://memberstrust.nssecurebanking.org/HBV3_2/hbloanapplogin.asp" %>
+					</div>
+					<div class="ads">
+						<%= link_to image_tag("ads/small_3.png", :alt=>"Press"), presmessage_path %>
+					</div>
+					<p class="red">
+						REMEMBER: Members Trust FCU will NEVER ask for your personal or account information
+						through an email.&nbsp; If you receive an email from Members Trust FCU or any other
+						credit union affiliate requesting verification of account information please DO NOT
+						respond.&nbsp; If you have any concerns about the email content contact us directly
+						at 513-765-6075 or 800-769-8934.
+					</p>
+				</div>

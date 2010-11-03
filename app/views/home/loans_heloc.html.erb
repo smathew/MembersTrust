@@ -1,0 +1,66 @@
+<h2>Home Equity Loans &amp; Lines of Credit</h2>
+				<div class="content">
+					<p>
+						Unlock the winning combination - your home and a home equity loan or line of credit
+						with Members Trust.&nbsp; You&#39;ve invested a lot to build your home&#39;s equity.&nbsp;
+						Now let your home invest in you, with a low-cost loan for that next big purchase.
+					</p>
+					<h3>Home Equity Loan</h3>
+					<p>
+						With a Members Trust Home Equity Loan you can borrow the funds you need for a specific
+						period of time.&nbsp; We offer loan terms anywhere from 36 to 120 months.
+					</p>
+					<h3>TRUSTLine Home Equity Line of Credit (HELOC)</h3>
+					<p>
+						If you want to borrow from time to time as the need arises, a Members Trust Home Equity
+						Line of Credit is the answer.&nbsp; You get a variable interest rate on the Line of 
+						Credit, and you only make payments when you maintain a balance.
+					</p>
+					<h3>Other Benefits</h3>
+					<ul>
+						<li>Borrow up to 90% of the equity in your home</li>
+						<li>The interest on your loan or line of credit may be tax deductible.  Ask your tax consultant for more details</li>
+						<li>Out of pocket expenses vary by location but generally average $350</li>
+						<li>Only pay interest on the money you use with our HELOC</li>
+					</ul>
+					<p>Click <%= link_to "here", rates_path(:anchor => "heloc") %> to view current rates.</p>
+					<p class="apply">
+						<%= link_to "", "https://memberstrust.nssecurebanking.org/HBV3_2/hbloanapplogin.asp" %>
+					</p>
+					<p>Call us today at 800-769-8934 to learn more about our great home equity products.</p>
+					<p class="disclaimer">
+						<%= image_tag "ehl2.png", :alt=>"Equal Housing Lender" %>
+					</p>
+					<%= javascript_include_tag "loancalc" %>
+					<h2>Loan Calculator</h2>       
+					<p class="indent">
+						Want to calculate your payments?  Use the Loan Calculator find the payments for you.
+					</p>
+					<p class="indent">
+						Simply fill out the first three fields and then select &#39;compute&#39;.
+					</p>
+					<div class="indent">
+						<form method="post">
+							<table class="loancalc">
+								<tr>
+									<td align="center"># of Payments</td>
+									<td align="center">Interest Rate</td>
+									<td align="center">Principal</td>
+									<td align="center">Monthly Payment</td>
+								</tr>
+								<tr>
+									<td align="center"><input type="text" name="payments" size="5" onchange="computeField(this)" /></td>
+									<td align="center"><input type="text" name="interest" size="6" onchange="computeField(this)" /></td>
+									<td align="center"><input type="text" name="principal" size="9" onchange="computeField(this)" /></td>
+									<td align="center"><input type="text" name="payment" size="9" onchange="computeField(this)" /></td>
+								</tr>
+								<tr>
+									<td align="center" colspan="4">
+										<input type="button" value="Compute" onclick="computeForm(this.form)" />
+										<input type="reset" value="Clear" onclick="clearForm(this.form)" />
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>
